@@ -3,6 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Camilan Ceria</title>
     <link rel="shortcut icon" href="download.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,10 +62,9 @@
         .box-link a:hover{
             background-color: blue;
             transform: scale(1.5);
-
         }
         .box-link a{
-            padding: 5px 20px;
+            padding: 5px 10px;
             transition: 0.4s;
         }
         .box-link li {
@@ -91,7 +91,7 @@
         .body{
             background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb264f73-3041-416a-87fb-d3e15c954110/d2uwjcu-c91a3199-11df-4828-8d0d-8d99d890dea4.png/v1/fill/w_894,h_894/falling_petals_5_by_scrapbee_d2uwjcu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvZmIyNjRmNzMtMzA0MS00MTZhLTg3ZmItZDNlMTVjOTU0MTEwXC9kMnV3amN1LWM5MWEzMTk5LTExZGYtNDgyOC04ZDBkLThkOTlkODkwZGVhNC5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.dnf2ZXv370WledAl_AlsoTPP0nLh4AFUyFGNviOiWAE");
             background-size: cover;
-            height: 100%;
+            height: 900px;
             /* width: 100%; */
             padding: 15px;
             font-family: Arial, Helvetica, sans-serif;
@@ -99,7 +99,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            /* height: 100vh; */
 
         }
         .gambarproduk{
@@ -120,7 +120,7 @@
             box-shadow: 0 4px 8px;
             overflow:hidden;
             width: 500px;
-            height: 500px;
+            height: 750px;
             text-align: center;
             padding: 20px;
         }
@@ -130,7 +130,7 @@
             object-fit: cover;
             margin: 0 auto;
         }
-        .card h3{
+        .card h2{
             margin: 15px 0;
             font-size: 30px;
         }
@@ -139,8 +139,12 @@
             color: #555;
             margin-bottom: 20px;
         }
-        .desk-utama{
-            font-size: 15px;
+        .desk{
+            font-size: 0.9em;
+            color:#333;
+            text-align: left;
+            margin-top: 10px;
+            margin-left: 7px;
         }
         .card button:hover{
             background-color: green;
@@ -153,7 +157,8 @@
             font-size:20px;
             border:1px black solid;
             border-radius:50px;
-            margin-top: 30px;
+            /* margin-top: 25px; */
+            margin-bottom: 10px;
         }
         .btn:hover{
             background-color:green;
@@ -165,14 +170,62 @@
             color:white;
         }
         .body2{
-            height: 100%;
-            width: 100%;
+            height: 1400px;
+            /* width: 100%; */
             padding-top: 10px;
             color: white;
             font-weight: bold;
             font-size: 30px;
             text-align: center;
         }    
+        #testimoni{
+            background-color: #42f560;
+            height: 730px;
+            margin: 0 150px;
+            border-radius: 25px;
+            box-shadow: 5px 5px white;
+        }
+        .test{
+            text-align: left;
+            border-bottom: 2px solid;
+            padding-bottom: 25px;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+        .test2{
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            height: 145px;
+            width: 80%;
+            background-color: #b3f542;
+            margin-bottom: 30px;
+            border-radius: 25px;
+            padding: 10px;
+            box-shadow: 3px 3px white;
+            /* margin-top: 30px; */
+        }
+        .test2 img{
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .nama{
+            font-size: 25px;
+            text-align: left;
+            font-weight: bold;
+            margin: 0;
+            margin-top: 15px;
+        }
+        .un{
+            font-size: 22px;
+            text-align: left;
+            margin: 0;
+        }
+        .text{
+            font-size: 18px;
+            text-align: left;
+        }
         .textalamat{
             font-weight: bold;
             /* font-size: 35px; */
@@ -182,10 +235,8 @@
             background: -webkit-linear-gradient(#eee, black);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            
-        }
-         
-        .mapswrapper{
+        /* }
+        #mapswrapper{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -193,7 +244,7 @@
             margin: 20px auto;
             padding: 15px;
             width: 1000px;
-            gap: 55px;
+            gap: 55px; */
         }
         .foot{
             background-color: #03631d;
@@ -203,6 +254,7 @@
             color: white;
             text-align: center;
             gap:100px;
+            /* padding: 1px; */
         }
         i{
             color: white;
@@ -211,9 +263,9 @@
         #about a{
             /* background-color: blue; */
             transform: scale(1.5);
+            transition: 0.5s;
         }
         #about a:hover{
-            transition: 0.5s;
             padding: 10px;
         }
     </style>
@@ -228,8 +280,9 @@
             <!-- < class="list-link"> -->
                 <li>
                     <a href="#menu">Menu</a>
+                    <a href="#deskripsi">Deskripsi</a>
+                    <a href="#testimoni">Testimoni</a>
                     <a href="#alamat">Alamat</a>
-                    <a href="#about">About</a>
                 </li>
             <!-- </ul> -->
         </div>
@@ -237,23 +290,55 @@
     <div id="menu" class="body">
         <div class="card-container">
             <div class="card">
-                <h3>Cireng isi Ayam Suwir</h3>
+                <h2>Cireng isi Ayam Suwir</h2>
                 <img class="gambarproduk" src="cireng2.jpeg">
-                <p class="desk-utama">Gurihnya Cireng, Lezatnya Ayam Suwir</p>
+                <h3 id="deskripsi">Deskripsi Produk:</h3>
+                <p class="desk">Terbuat dari bahan-bahan berkualitas yang dipilih dengan cermat untuk memberikan rasa gurih dan kenikmatan tiada duanya</p>
+                <p class="desk">Keunggulan: Renyah di luar, lembut di dalam, tanpa pengawet</p>
+                <p class="desk">Saran Penyajian: Nikmati selagi hangat dengan sambal favoritmu!</p>
+                <p class="desk">Peringatan: isian Cireng ini mempunyai rasa kepedasan yang lumayan tinggi, Jadi bagi yang tidak menyukai pedas tidak disarankan untuk membeli produk ini!</p>
                 <a href="https://wa.me/6283198451868?text=Assalamualaikum, Saya mau pesen cirengnya kak"><button class="btn">PESAN (Rp 3.000)</button></a>
             </div>
         </div>
     </div>
-    <hr style="color: rebeccapurple;">
-    <!-- <div class="body2"> -->
-        <div id="alamat" class="mapswrapper"><h3 class="textalamat">Alamat Produksi</h3><iframe width="600" height="450" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.%20Baladewa%20West%20Cikampek%2C%20Cikampek%2C%20Karawang%2C%20West%20Java%2041373&zoom=10&maptype=roadmap"></iframe><a href="https://www.fluxpromptgenerator.net"></a></div>
-        <footer id="about" class="foot"><p>Ada Kendala? Silahkan Hubungi:</p>
-            <a href="https://wa.me/6283198451868"> <i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61569962241014&mibextid=ZbWKwL"> <i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/cemilanceeria"> <i class="bi bi-instagram"></i></a>
-            <a href="https://www.youtube.com/@CemilanCeria"> <i class="bi bi-youtube"></i></a>
-            <a href="mailto:cemilanceeria@gmail.com"> <i class="bi bi-envelope-at"></i></a>
-        </footer>
-    <!-- </div> -->
+    <hr>
+    <div class="body2">
+        <div id="testimoni">
+            <h2 class="test">Testimoni</h2>
+            <!-- <hr> -->
+            <div class="test2">
+                <img src="ppdonatremove.png">
+                <div class="user">
+                    <p class="nama">Zeyy</p>
+                    <p class="un">@zeyyr0408</p>
+                    <p class="text">Cireng isi ayam suwir pedesnya mantul banget! Gurih, pedesnya nampol, tapi tetep bikin pengen ngemil terus. Cocok banget buat temen nonton atau ngumpul sama temen.</p>
+                </div>
+            </div>
+            <div class="test2">
+                <img src="ppdonatremove.png">
+                <div class="user">
+                    <p class="nama">Rivexa</p>
+                    <p class="un">@rvx12</p>
+                    <p class="text">Gila, ini cireng pedesnya nggak main-main, tapi tetep enak! Isi ayam suwiran lembutnya tuh pas banget sama cireng yang gurih. Baru nyoba sekali aja udah nge-fans banget!</p>
+                </div>
+            </div>
+            <div class="test2">
+                <img src="ppdonatremove.png">
+                <div class="user">
+                    <p class="nama">Ahmad</p>
+                    <p class="un">@venom07</p>
+                    <p class="text">Ini camilan bikin mood naik sih! Cirengnya renyah di luar, isian ayam suwiran pedesnya meleleh di mulut. Kombinasi rasa gurih sama pedesnya juara, nggak nyesel nyobain!</p>
+                </div>
+            </div>
+        </div>
+        <div id="alamat"><h3 class="textalamat">Alamat Produksi</h3><iframe width="600" height="450" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.%20Baladewa%20West%20Cikampek%2C%20Cikampek%2C%20Karawang%2C%20West%20Java%2041373&zoom=10&maptype=roadmap"></iframe><a href="https://www.fluxpromptgenerator.net"></a></div>
+    </div>
+    <footer id="about" class="foot"><p>Ada Kendala? Silahkan Hubungi:</p>
+        <a href="https://www.youtube.com/@CemilanCeria"> <i class="bi bi-youtube"></i></a>
+        <a href="https://www.instagram.com/cemilanceeria"> <i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/6283198451868"> <i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61569962241014&mibextid=ZbWKwL"> <i class="bi bi-facebook"></i></a>
+        <a href="mailto:cemilanceeria@gmail.com"> <i class="bi bi-envelope-at"></i></a>
+    </footer>
 </body>
 </html>
