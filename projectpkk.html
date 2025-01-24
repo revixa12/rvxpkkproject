@@ -17,14 +17,13 @@
             background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb264f73-3041-416a-87fb-d3e15c954110/d2uwjcu-c91a3199-11df-4828-8d0d-8d99d890dea4.png/v1/fill/w_894,h_894/falling_petals_5_by_scrapbee_d2uwjcu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvZmIyNjRmNzMtMzA0MS00MTZhLTg3ZmItZDNlMTVjOTU0MTEwXC9kMnV3amN1LWM5MWEzMTk5LTExZGYtNDgyOC04ZDBkLThkOTlkODkwZGVhNC5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.dnf2ZXv370WledAl_AlsoTPP0nLh4AFUyFGNviOiWAE");
             background-size: cover;
             height:100vh;
-            /* width: 100vw; */
+            min-width: min-content;
             margin: 0;
         }
         html{
             scroll-behavior: smooth;
         }
         .navbar{
-            width: 100%;
             height: 100px;
             padding: 15px;
             margin-bottom: 10px;
@@ -53,7 +52,6 @@
         .list-link a{
             text-decoration: none;
             display: flex;
-            /* list-style: none; */
             margin-right: 10px;
             justify-content: space-between;
             width: 100%;
@@ -93,15 +91,9 @@
         .body{
             background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb264f73-3041-416a-87fb-d3e15c954110/d2uwjcu-c91a3199-11df-4828-8d0d-8d99d890dea4.png/v1/fill/w_894,h_894/falling_petals_5_by_scrapbee_d2uwjcu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvZmIyNjRmNzMtMzA0MS00MTZhLTg3ZmItZDNlMTVjOTU0MTEwXC9kMnV3amN1LWM5MWEzMTk5LTExZGYtNDgyOC04ZDBkLThkOTlkODkwZGVhNC5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.dnf2ZXv370WledAl_AlsoTPP0nLh4AFUyFGNviOiWAE");
             background-size: cover;
-            height: 2200px;
-            /* width: 100%; */
-            padding: 15px;
+            padding: 45px;
             font-family: Arial, Helvetica, sans-serif;
             background-color:none;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            /* height: 100vh; */
 
         }
         .gambarproduk{
@@ -120,15 +112,17 @@
             margin-bottom: 50px;
         }
         /* .card-container2{
-            display: flex; */
-        /* } */
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        } */
         .card{
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px;
-            overflow:hidden;
             width: 500px;
-            height: 990px;
             text-align: center;
             padding: 20px;
         }
@@ -213,6 +207,12 @@
             box-shadow: 3px 3px white;
             /* margin-top: 30px; */
         }
+        /* .test2:hover{
+            transform: scale(1);
+        }
+        .test2{
+            transition: 0.5s;
+        } */
         .test2 img{
             margin-right: 20px;
             margin-left: 20px;
@@ -290,6 +290,28 @@
             border: 3px black solid;
             border-radius: 25px;
         }
+
+        @media only screen and (max-width: 426px) {
+            .navbar .box-link li a {
+                font-size: small;
+            }
+            .card-container{
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                margin: 0 auto;
+            }
+            .nama{
+                font-size: 20px;
+            }
+            .un{
+                font-size: 18px;
+            }
+            .text{
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -327,6 +349,7 @@
                 </div>
                 <button class="btn" onclick="kalimat()">PESAN (Rp 3.000)</button>
             </div>
+            
             <div class="card">
                 <h2>Lumpia Kering</h2>
                 <img class="gambarproduk" src="lumpia.jpeg">
@@ -342,7 +365,6 @@
                 </div>
                 <button class="btn" onclick="alert('Mohon Maaf pelanggan yang terhormat, tapi produk ini masih belum tersedia🙏')">COMMING SOON</button>
             </div>
-        >
             <script>
                 const alamatwa="https://wa.me/6283198451868?text="
                 function kalimat(){
@@ -351,7 +373,7 @@
                     if(nama.value == "" || kelas.value==""){
                         alert("Untuk Mempermudah, Tolong masukan nama dan kelas Anda terlebih dahulu🙏")
                     }else{
-                        const kalimat="Assalamualaikum saya " + nama.value + " dari " + kelas.value + ", ingin memesan cirengnya kak"
+                        const kalimat="Assalamualaikum saya " + nama.value + " dari kelas " + kelas.value + ", ingin memesan cirengnya kak"
                         const pesanan = alamatwa + encodeURI(kalimat)
                         nama.value=""
                         kelas.value=""
