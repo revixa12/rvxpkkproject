@@ -59,7 +59,7 @@
             gap: 30px;
         }
         .box-link a:hover{
-            background-color: blue;
+            background-color:palegreen;
             transform: scale(1.5);
         }
         .box-link a{
@@ -166,7 +166,7 @@
             background-color:green;
         }
         .btn:active{
-            background-color:blue;
+            background-color: blue;
         }
         .garis{
             color:white;
@@ -257,12 +257,13 @@
         .foot{
             background-color: #03631d;
             /* width: 100%; */
-            height: 100px;
+            height: 130px;
             font-size: 25px;
             color: white;
             text-align: center;
             gap:100px;
-            /* padding: 1px; */
+            padding: 1px;
+            margin-bottom: 10px;
         }
         i{
             color: white;
@@ -290,6 +291,110 @@
             border: 3px black solid;
             border-radius: 25px;
         }
+        .modal{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(165, 165, 165, 0.5);
+            z-index: 20;
+            /* margin-left: 10px; */
+        }
+        .cart{
+            margin: 10% auto;
+            /* background: rgb(blueviolet, darkblue, blue); */
+            width: 600px;
+            height: 400px;
+            border-radius: 8px;
+            background: #32a852;
+            padding: 10px;
+        }
+        .head{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: palegoldenrod 4px solid;
+            padding: 5px;    
+        }
+        .head h1{
+            margin-left: 10px;
+            color: palegreen;
+        }
+        #keluar{
+            background-color: #32a852;
+            color: palegreen;
+            border-radius: 12px;
+            /* border: none; */
+        }
+        .wadah{
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* background-color: red; */
+            height: 275px;
+            padding: 10px;
+            /* justify-content: space-between; */
+        }
+        .isi{
+            display: flex;
+            flex-direction: row;
+            /* background-color: blue; */
+            height: 200px;
+            color: palegreen;
+            margin-bottom: 20px;
+            
+        }
+        .isi img{
+            height: 200px;
+            width: 200px;
+        }
+        .isi h1{
+            margin-left: 20px;
+        }
+        .isi h3{
+            margin-left: 20px;
+        }
+        .isi select{
+            margin-left: 20px;
+            width: 150px;
+            height: 25px;
+            background-color: palegoldenrod;
+            color: black;
+        }
+        .bawah{
+            height: 50px;
+            /* background-color: orange; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #click{
+            background-color: palegreen;
+            font-weight: bold;
+            border: none;
+            color: black;
+            width: 200px;
+            border-radius: 8px;
+        }
+        .container-button{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+        }
+        .container-button h4{
+            /* color: palegreen; */
+            font-weight: 900;
+            font-size: larger;
+            
+        }
+        #tambah, #kurang{
+            width: 50px;
+            font-weight: bold;
+            font-size: 26px;
+            border-radius: 8px;
+            border: none;
+            background-color: palegreen;
+        }
 
         @media only screen and (max-width: 426px) {
             .navbar .box-link li a {
@@ -315,6 +420,37 @@
     </style>
 </head>
 <body>
+    <div class="event" id="event">
+        <div class="modal" id="modall">
+            <div class="cart">
+                <div class="head">
+                    <h1>Pembayaran</h1>
+                    <button id="keluar"><i class="bi bi-x"></i></button>
+                </div>
+                <div class="wadah">
+                    <div class="isi">
+                        <img src="cireng2.jpeg" alt="">
+                        <div>
+                            <h1>Cireng Isi Ayam Suwir</h1>
+                            <h3>Metode Pembayaran</h3>
+                            <select name="" id="" aria-readonly="true">
+                                <option value="cod">Cod Only</option>
+                                <!-- <option value="none">Belum Tersedia</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bawah">
+                        <div class="container-button">
+                            <button id="tambah" onclick="tambah()">+</button>
+                            <h4 id="number">1</h4>
+                            <button id="kurang" onclick="kurang()">-</button>
+                        </div>
+                        <button id="click" onclick="kirimpesanan()">Kirim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="navbar">
         <div class="box-logo">
             <img src="download.png">
@@ -341,13 +477,13 @@
                 <p class="desk">Keunggulan: Renyah di luar, lembut di dalam, tanpa pengawet</p>
                 <p class="desk">Saran Penyajian: Nikmati selagi hangat dengan sambal favoritmu!</p>
                 <p class="desk">Peringatan: isian Cireng ini mempunyai rasa kepedasan yang lumayan tinggi, Jadi bagi yang tidak menyukai pedas tidak disarankan untuk membeli produk ini!</p>
-                <hr>
-                <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
+                <!-- <hr> -->
+                <!-- <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
                 <div class="input">
                     <input type="text" id="nama" placeholder="Masukan nama Anda">
                     <input type="text" id="kelas" placeholder="Masukan kelas Anda">
-                </div>
-                <button class="btn" onclick="kalimat()">PESAN (Rp 3.000)</button>
+                </div> -->
+                <button class="btn" id="klik">PESAN (Rp 3.000)<i class="bi bi-cart4"></i></button>
             </div>
             
             <div class="card">
@@ -357,40 +493,14 @@
                 <p class="desk">Lumpia kering ini hadir dalam berbagai varian rasa, mulai dari yang gurih, pedas, hingga manis, yang pasti membuat setiap gigitannya semakin seru. Rasakan kenikmatan dari camilan sederhana yang menyenangkan ini</p>
                 <p class="desk">Lumpia kering hadir dengan cita rasa yang sederhana namun memikat. Dibuat dari kulit lumpia pilihan yang digoreng hingga garing, camilan ini memberikan rasa gurih yang pas di mulut dan cocok untuk menemani waktu santai</p>
                 <p class="desk">Saran Penyajian: Nikmati rasa favoritmu dan makan camilan ini selagi hangat</p>
-                <hr>
-                <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
+                <!-- <hr> -->
+                <!-- <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
                 <div class="input">
                     <input type="text" id="nama" placeholder="Masukan nama Anda">
                     <input type="text" id="kelas" placeholder="Masukan kelas Anda">
-                </div>
+                </div> -->
                 <button class="btn" onclick="alert('Mohon Maaf pelanggan yang terhormat, tapi produk ini masih belum tersedia🙏')">COMMING SOON</button>
             </div>
-            <script>
-                const alamatwa="https://wa.me/6283198451868?text="
-                function kalimat(){
-                    const nama=document.getElementById('nama')
-                    const kelas=document.getElementById('kelas')
-                    if(nama.value == "" || kelas.value==""){
-                        alert("Untuk Mempermudah, Tolong masukan nama dan kelas Anda terlebih dahulu🙏")
-                    }else{
-                        const kalimat="Assalamualaikum saya " + nama.value + " dari kelas " + kelas.value + ", ingin memesan cirengnya kak"
-                        const pesanan = alamatwa + encodeURI(kalimat)
-                        nama.value=""
-                        kelas.value=""
-                        window.location.replace(pesanan)
-                    }
-                    // console.log(nama.value, kelas.value)
-                    // console.log(pesanan)
-                }
-                
-                // function noname(){
-                //     const nama=document.getElementById('nama')
-                //     const kelas=document.getElementById('kelas')
-                //     nama.value=""
-                //     kelas.value=""
-                    
-                // }
-            </script>
         </div>
         <div class="card-container">
             <div class="card">
@@ -401,12 +511,12 @@
                 <p class="desk">Dari bahan alami hingga proses pengolahan terbaik, setiap keripik pisang ini menghadirkan kelezatan khas nusantara. Pas untuk camilan keluarga atau bingkisan teman dekat</p>
                 <p class="desk">Dari rasa original yang klasik hingga cokelat dan matcha yang trendi, keripik pisang ini cocok untuk anak muda dan keluarga yang suka variasi rasa.</p>
                 <!-- <p class="desk">Peringatan: isian Cireng ini mempunyai rasa kepedasan yang lumayan tinggi, Jadi bagi yang tidak menyukai pedas tidak disarankan untuk membeli produk ini!</p> -->
-                <hr>
-                <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
+                <!-- <hr> -->
+                <!-- <h3>Sebelum pesan silahkan isi Nama dan Kelas Anda terlebih dahulu</h3>
                 <div class="input">
                     <input type="text" id="nama" placeholder="Masukan nama Anda">
                     <input type="text" id="kelas" placeholder="Masukan kelas Anda">
-                </div>
+                </div> -->
                 <button class="btn" onclick="alert('Mohon Maaf pelanggan yang terhormat, tapi produk ini masih belum tersedia🙏')">COMMING SOON</button>
             </div>
         </div>
@@ -444,12 +554,104 @@
         </div>
         <div id="alamat"><h3 class="textalamat">Alamat Produksi</h3><iframe width="600" height="450" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.%20Baladewa%20West%20Cikampek%2C%20Cikampek%2C%20Karawang%2C%20West%20Java%2041373&zoom=10&maptype=roadmap"></iframe><a href="https://www.fluxpromptgenerator.net"></a></div>
     </div>
-    <footer id="about" class="foot"><p>Ada Kendala? Silahkan Hubungi:</p>
-        <a href="https://www.youtube.com/@CemilanCeria"> <i class="bi bi-youtube"></i></a>
-        <a href="https://www.instagram.com/cemilanceeria"> <i class="bi bi-instagram"></i></a>
-        <a href="https://wa.me/6283198451868"> <i class="bi bi-whatsapp"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61569962241014&mibextid=ZbWKwL"> <i class="bi bi-facebook"></i></a>
-        <a href="mailto:cemilanceeria@gmail.com"> <i class="bi bi-envelope-at"></i></a>
+    <footer id="about" class="foot"><p>Platform Media Sosial Kami:</p>
+        <a href="https://www.tiktok.com/@cemilanceria_official"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61569962241014&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/cemilanceeria"><i class="bi bi-instagram"></i></a>
+        <a href="http://shopee.co.id/10tentsupp2"><i class="bi bi-cart4"></i></a>
+        <a href="https://www.youtube.com/@CemilanCeeria"><i class="bi bi-youtube"></i></a>
+        <a href="https://pin.it/6opW6XutC"><i class="bi bi-pinterest"></i></a>
+        <a href="https://x.com/cemilan_ceria?t=Ulgpf4-3NaOmEH8zr7vCkg&s=09"><i class="bi bi-twitter-x"></i></a>
     </footer>
+    <script>
+        var max = 30;
+        var min = 1;
+
+        function tambah() {
+            const jumlah = document.getElementById('number');
+            
+            var angkaterakhir = jumlah.textContent;
+            var totalpembelian = Number(angkaterakhir) + 1;
+            
+            if (totalpembelian > max) {
+                alert("Jumlah pembelian sudah mencapai maksimum")
+            }else{
+                jumlah.textContent = totalpembelian;
+                
+            }
+        }
+
+        function kurang() {
+            const jumlah = document.getElementById('number');
+            
+            var angkaterakhir = jumlah.textContent;
+            var totalpembelian = Number(angkaterakhir) - 1;
+            
+            if (totalpembelian <= min) {
+                alert("sing eling, niat meuli teu ai sia");
+            } else {
+                jumlah.textContent = totalpembelian;
+            }
+        }
+        
+        function kirimpesanan() {
+            const jumlah = document.getElementById('number');
+            const nama = prompt("Nama");
+            const kelas = prompt("Kelas");
+
+            if(nama == "" || kelas == ""){
+                alert("Tolong diisi")
+            }else{
+                const kalimat = "Assalamualaikum saya " + nama + " dari kelas " + kelas + ", ingin memesan cirengnya sebanyak " + jumlah.textContent + "pcs";
+                
+                const alamatwa = "https://wa.me/6283198451868?text=";
+                const pesanan = alamatwa + encodeURI(kalimat);
+                
+                window.location.replace(pesanan);
+            }
+
+        }
+
+        const tekan = document.getElementById('klik');
+        const modal = document.getElementById('modall');
+        const keluar = document.getElementById('keluar');
+
+        tekan.addEventListener("click" , () => {
+            modal.style.display = "block";
+        })
+        keluar.addEventListener("click" , () => {
+            modal.style.display = "none";
+        })
+        
+        
+        // const nama = prompt("Siapa namamu?")
+        // const kelas = prompt("Kelas berapa kamu?")
+        // if (nama == "", kelas == "") {
+        //     alert("Tolong isi nama atau kelas anda terlebih dahulu")
+        //     } else {
+        //         alert("Selamat datang " + nama + " dari kelas " + kelas)
+        //     }
+                
+        // function kalimat(){
+        //     const nama=document.getElementById('nama')
+        //     const kelas=document.getElementById('kelas')
+        //     if(nama.value == "" || kelas.value==""){
+        //         alert("Untuk Mempermudah, Tolong masukan nama dan kelas Anda terlebih dahulu🙏")
+        //     }else{
+        //         nama.value=""
+        //         kelas.value=""
+        //         }
+        // console.log(nama.value, kelas.value)
+        // console.log(pesanan)
+                // }
+                
+        // function noname(){
+        //     const nama=document.getElementById('nama')
+        //     const kelas=document.getElementById('kelas')
+        //     nama.value=""
+        //     kelas.value=""
+                    
+            // }
+    </script>
 </body>
 </html>
