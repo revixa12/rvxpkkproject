@@ -374,7 +374,7 @@
             font-weight: bold;
             border: none;
             color: black;
-            width: 200px;
+            width: 175px;
             border-radius: 8px;
         }
         .container-button{
@@ -444,11 +444,12 @@
                     <div class="bawah">
                         <div class="container-button">
                             <button id="tambah" onclick="tambah()">+</button>
-                            <h4 id="number">1</h4>
+                            <h4 id="number">0</h4>
                             <button id="kurang" onclick="kurang()">-</button>
                             <h4>pcs</h4>
+                            <h4 id="harga">Total : Rp 0</h4>
                         </div>
-                        <button id="click" onclick="kirimpesanan()">Kirim</button>
+                        <button id="click" onclick="kirimpesanan()">Checkout via Whatsapp</button>
                     </div>
                 </div>
             </div>
@@ -572,6 +573,8 @@
 
         function tambah() {
             const jumlah = document.getElementById('number');
+            const totalharga = document.getElementById('harga');
+            const price = 3000;
             
             var angkaterakhir = jumlah.textContent;
             var totalpembelian = Number(angkaterakhir) + 1;
@@ -580,20 +583,24 @@
                 alert("Jumlah pembelian sudah mencapai maksimum")
             }else{
                 jumlah.textContent = totalpembelian;
+                totalharga.innerText = "Total: Rp" + price * totalpembelian;
                 
             }
         }
 
         function kurang() {
             const jumlah = document.getElementById('number');
+            const totalharga = document.getElementById('harga');
+            const price = 3000;
             
             var angkaterakhir = jumlah.textContent;
             var totalpembelian = Number(angkaterakhir) - 1;
             
             if (totalpembelian <= min) {
-                alert("sing eling, niat meuli teu ai sia");
+                alert("Tidak bisa melebihi batas minimum");
             } else {
                 jumlah.textContent = totalpembelian;
+                totalharga.innerText = "Total: Rp" + price * totalpembelian;
             }
         }
         
@@ -614,6 +621,11 @@
             }
 
         }
+
+        // function tambah() {
+            const harga = document.getElementById('number');
+
+        // }
 
         const tekan = document.getElementById('klik');
         const modal = document.getElementById('modall');
